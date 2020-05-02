@@ -1,0 +1,33 @@
+.verificationContainer{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.verification{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.verificationContainer input{
+  padding: 10px;
+  margin: 5px;
+  border: 0.3px solid rgba(0, 0, 0, 0.3);
+}
+.verificationContainer p{
+  margin: 5px;
+}
+.verificationContainer  input[type=submit]{
+  background:#C4C4C4;
+  border: none;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5px;
+
+}
+
+

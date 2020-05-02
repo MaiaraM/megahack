@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.loginContainer{
+  display: flex;
+  margin: 0 auto;
+  /* verificar */
+  margin-top: 6%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2C1244;
+}
+
+/*Style login*/
+.loginContainer .loginFormDados h1{
+  color: #2C1244;
+  font-family: 'Montserrat', sans-serif;
+  font-size:2.18em ;
+}
+
+/*Login Google / Facebook */
+.loginContainer .loginRedeSociais{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 9.375em;
+}
+.loginContainer .loginRedeSociais div{
+  max-width: 1.875em;
+  padding:0.625em;
+}
+
+/*Style p*/
+.loginContainer .loginFormDados p{
+    font-size: 0.75em;
+    font-weight: 100;
+}
+
+.loginContainer .loginRedeSociais img{
+  max-width: 100%;
+}
+
+/*Style formulario*/
+.loginContainer .loginForm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.loginContainer .formLogin{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.56em;
+}
+
+.loginContainer .formLogin .loginAuthentication {
+  padding: 0.625em;
+  display: flex;
+  align-items: center;
+}
+
+.loginContainer .formLogin .loginAuthentication input{
+  border: none;
+  border-bottom: 1px solid #909090;
+  background: none;
+  padding: 0.675em;
+  margin-left: 0.675em;
+}
+
+.loginContainer .loginFormDados{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Remember Password*/
+.loginContainer .loginCheckbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.35em;
+}
+
+.loginContainer .check{
+  display: flex;
+}
+
+.loginContainer .check p{
+  margin-left: 0.35em;
+}
+.o{
+  background-color: #2C1244;
+}
+.loginContainer .formLogin input[type=checkbox]{
+  background: salmon;
+}
+/*Button login*/
+
+.loginContainer .formLogin input[type=submit]{
+  background: #2C1244;
+  border: none;
+  border-radius: 1.87em;
+  color: #fff;
+  padding: 0.7em;
+  width: 100%;
+  margin-top:2em;
+}
+
+/*Imagem*/
+.loginContainer .loginImg img{
+  max-width: 100%;
+}
+
+.loginContainer .loginImg{
+  max-width: 18.75em;
+}
