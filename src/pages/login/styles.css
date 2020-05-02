@@ -115,3 +115,19 @@
 .loginContainer .loginImg{
   max-width: 18.75em;
 }
+
+
+/*Media */
+
+@media(max-width : 37.5em){
+  .loginImg{
+    display: none;
+  }
+
+  .loginContainer{
+    align-self: center;
+    align-items: center;
+    margin-top: 50%;
+  }
+
+}
