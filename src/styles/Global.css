@@ -8,3 +8,5 @@
 @import '../containers/LoginContainer/styles.css';
 @import '../containers/LayoutContainer/styles.css';
 @import '../containers/VerificationContainer/styles.css';
+@import '../components/footer/styles.css';
+@import '../components/header/styles.css';

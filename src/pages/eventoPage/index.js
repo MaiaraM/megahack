@@ -10,7 +10,7 @@ import VerificationContainer from '../../containers/VerificationContainer/Verifi
 import { observer } from 'mobx-react';
 
 const EventsPage = () => {
-  const [state, setstate] = useState(true);
+  const [state, setstate] = useState(false);
 
   return <div className="Container">
     {state ?
