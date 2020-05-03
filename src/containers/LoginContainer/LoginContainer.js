@@ -19,7 +19,6 @@ const LoginContainer = (props) => {
   
   async function handleSubmit(data)  {
       const isSuccess = await props.authStore.login(data.email, data.password);
-      console.log(isSuccess)
   }
 
   return (
