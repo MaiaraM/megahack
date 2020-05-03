@@ -9,7 +9,6 @@ class AuthAPI {
     static async login(username, password) {
         try {
             const response = await BaseAPI.post(URLS.LOGIN, { username, password:password });
-            //const response = loginMok;
             if(response.status === 200){
                 StorageUtil.setItem(KEYS.USER_KEY, username);
                 return true;

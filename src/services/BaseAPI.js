@@ -34,6 +34,7 @@ class BaseAPI {
 export const URLS = {
     LOGIN:"/login",
     CUSTOMERS: "/customers",
+    EVENTS:"/events"
 }
 
 /**Retorno generico de excessões */

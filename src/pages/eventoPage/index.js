@@ -7,17 +7,14 @@ import iconUp from "./assets/iconUp.svg";
 import palestranteImg from "./assets/palestranteImg.svg";
 import iconGoogle from "./assets/iconGoogle.svg";
 import VerificationContainer from '../../containers/VerificationContainer/VerificationContainer';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
-const EventsPage = () => {
-  const [state, setstate] = useState(false);
+const EventsPage = (props) => {
 
   return <div className="Container">
-    {state ?
-      <VerificationContainer setEventUUid={setstate(false)} />
-      :
+    
       <>
-        {console.log(state)}
+      {console.log(props)}
         <div className="eventLogo">
           <img src={eventLogo} alt="Imagem do Logo de Evento" />
         </div>
@@ -141,4 +138,6 @@ const EventsPage = () => {
 
 };
 
-export default (observer(EventsPage));
+export default inject((stores) => ({
+  eventStore: stores.stores.eventStore,
+}))(observer(EventsPage)); 

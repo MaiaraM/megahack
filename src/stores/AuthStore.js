@@ -37,7 +37,6 @@ class AuthStore {
         const savedUser = StorageUtil.getItem(KEYS.USER_KEY);
         if(savedUser) {
             const result = await this.rootStore.userStore.getUser(savedUser);
-            console.log(result)
             this.isAuthenticated = !result.error;
             if(!this.isAuthenticated) {
                 StorageUtil.cleanAll();
