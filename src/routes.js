@@ -10,7 +10,14 @@ import LoadingComponent from './components/LoadingComponent/LoadingComponent';
 const LoginCenterPage = lazy(() => import('./pages/login'));
 const Home = lazy(() => import('./pages/home/HomePage'));
 const EventsPage = lazy(() => import('./pages/eventoPage'));
+<<<<<<< HEAD
 const VerificacaoPage = lazy(() => import('./pages/verificacao'));
+=======
+const ConferenciaPage = lazy(() => import('./pages/conferencia'));
+const patrocinadorPage = lazy(() => import('./pages/patrocinador/patrocinadorPage'));
+
+
+>>>>>>> FrontEnd
 
 //Rotas globais de nossa aplicação manager.
 export default inject(stores => (
@@ -25,7 +32,11 @@ export default inject(stores => (
                 <Switch>
                     <Route exact path='/login' render={() => <Redirect to={"/"} />} />
                     <Route exact path='/logout' render={() => logout()} />
+<<<<<<< HEAD
                     <PrivateRoute path="/" component={Home} isAuthenticated={props.authStore.isAuthenticated} />
+=======
+                    <PrivateRoute path="/" component={patrocinadorPage} isAuthenticated={props.authStore.isAuthenticated} />
+>>>>>>> FrontEnd
                     <Redirect to="/error-page" /> 
                 </Switch>
             </Suspense>

@@ -8,12 +8,24 @@
   color: #2C1244;
 }
 
-.loginFormDados{
+.loginContainer .loginForm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.loginContainer .loginFormDados{
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1.25em;
   height: 90%;
   margin: 0.625em;
 }
-
 /*Logo Empresa*/
 .logoEmpresa{
   width: 100%;
@@ -29,7 +41,6 @@
 .logoImg img{
   width: 100%;
 }
-
 
 /*Style login*/
 .loginContainer .loginFormDados h1{
@@ -48,38 +59,24 @@
   max-width: 3em;
   padding:0.625em;
 }
-.formLogin{
-  padding: 10px;
-  width: 100%;
-}
 
-/*Style p*/
 .loginContainer .loginRedeSociais img{
   max-width: 100%;
 }
 
 /*Style formulario*/
-.loginContainer .loginForm{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.loginContainer .formLogin{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: 1.56em;
-}
-
 .loginAuthentication {
   padding: 0.625em;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
-
+/*Inputs email e senha*/
+.loginAuthentication .formAuthentication{
+  display: flex;
+  width: 100%;
+}
 .loginAuthentication input{
   border: none;
   border-bottom: 1px solid #909090;
@@ -90,44 +87,10 @@
   width: 100%;
 }
 
-.loginContainer .loginFormDados{
-  max-width: 400px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*Remember Password*/
-.loginContainer .loginCheckbox{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 15px;
+.loginAuthentication .formCheck{
   width: 100%;
-}
-
-.loginContainer .check{
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loginContainer .check p{
-  margin-left: 0.35em;
-}
-
-/*Button login*/
-
-.loginContainer .formLogin input[type=submit]{
-  background: #2C1244;
-  border: none;
-  border-radius: 1.87em;
-  color: #fff;
-  padding: 0.7em;
-  width: 100%;
-  margin-top:2em;
+  padding: 10px;
 }
 
 /*Imagem*/
@@ -140,6 +103,15 @@
   padding: 0.31px;
 }
 
+.loginAuthentication button[type=submit]{
+  background: #2C1244;
+  border: none;
+  border-radius: 1.87em;
+  color: #fff;
+  padding: 0.7em;
+  width: 100%;
+  margin-top:2em;
+}
 
 /*Media */
 

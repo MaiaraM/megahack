@@ -1,0 +1,85 @@
+.Container{
+  max-width: 90%;
+  padding: 0.625em;
+  margin: 0 auto;
+}
+
+.Container .ContainerConteudo{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContainerConteudo .ContainerConteudoTopo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContainerConteudo .LogoPatrocinador{
+  max-width: 16.625em;
+  padding: 0.625em;
+}
+.ContainerConteudo .LogoPatrocinador img{
+  width: 100%;
+}
+
+.ContainerConteudo .VideoPatrocinador{
+  max-width: 80%;
+}
+
+.ContainerConteudo .VideoPatrocinador img{
+  width: 100%;
+}
+
+.ContainerConteudo .ContainerConteudoChat{
+  width: 92%;
+  padding: 0.625em;
+  
+}
+
+
+.ContainerConteudo .Chat{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  margin-top: 0.7em;
+  color: #2C1244;
+}
+
+.ContainerConteudo .Chat h1{
+  font-size: 1.25em;
+}
+
+.Container .ChatSuporte{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.625em;
+}
+
+.Container .ChatSuporte .ChatPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.125em;
+}
+
+.Container .ChatSuporte .ChatImgPerfil{
+  max-width: 200px;
+}
+
+.Container .ChatSuporte .ChatImgPerfil img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+

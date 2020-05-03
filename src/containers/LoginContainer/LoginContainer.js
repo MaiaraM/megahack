@@ -36,16 +36,18 @@ const LoginContainer = (props) => {
           </div>
           <p>Ou entre com a sua conta do e-mail</p>
           <Form onSubmit={handleSubmit} className="loginAuthentication">
-            <img src={loginEmail} alt="Icone email" />
-            <Input name="email" type="email" />
-            <img src={loginLock} alt="Icone senha" />
-            <Input name="password" type="password" />
-            <div className="check">
-              <input type="checkbox" name="rememberPassword" className="o" />
-              <p>Lembrar de mim</p>
+              <div className="formAuthentication">
+                <img src={loginEmail} alt="Icone email" />
+                <Input name="email" type="email" />
+              </div>
+              <div className="formAuthentication">
+                <img src={loginLock} alt="Icone senha" />
+                <Input name="password" type="password" />
+              </div>
+            <div className="formCheck">
+              <p>Esqueceu a senha?</p>
             </div>
-            <p>Esqueceu a senha?</p>
-            <button type="submit">Sign in</button>
+              <button type="submit">Sign in</button>
           </Form>
         </div>
         <div className="loginImg">
