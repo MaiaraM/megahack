@@ -9,7 +9,7 @@
     width:100% ;
   }
   .Footer{
-    background-image: url(../components/footer/assets/backgroundMobile.png);
+    background-image: url(../../components/footer/assets/backgroundMobile.png);
   }
   .headerUser{
     display: flex;
