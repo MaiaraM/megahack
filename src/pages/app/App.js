@@ -14,9 +14,9 @@ const App = () => {
     return (
         <div className="App" style={{height:'100vh'}}>
             <Provider stores={rootStore}  >
-                    <Layout>
+                    <main>
                         <Routes />
-                    </Layout>
+                    </main>
             </Provider>
         </div>
     )

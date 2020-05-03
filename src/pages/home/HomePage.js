@@ -3,6 +3,7 @@ import { observer, inject } from "mobx-react";
 import { withRouter } from 'react-router-dom';
 
 import { HomeRoutes } from '../../routes';
+import Layout from '../../containers/LayoutContainer/LayoutContainer';
 
 
 class HomePage extends React.Component {
@@ -11,7 +12,9 @@ class HomePage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <HomeRoutes />
+                <Layout>
+                    <HomeRoutes />
+                </Layout>
             </React.Fragment>
         )
     }
