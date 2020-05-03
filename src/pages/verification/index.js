@@ -1,14 +1,18 @@
 import React from 'react';
+import Footer from "../../components/footer";
 import "./styles.css";
 
 const Verification =()=>(
+  
   <div className="verificationContainer">
     <div className="verification">
-        <p>Entre com  o código do evento</p>
-        <input type="text" name="codigo" id="codigo"/>
-        <input type="submit" value="Entrar" placeholder="ENTER"/>
+        <p>Digite o código do evento que você deseja participar</p>
+        <input type="text" name="codigo" id="codigo" placeholder="Digite seu codigo aqui"/>
+        <input type="submit" value="Entrar no evento" />
     </div>
   </div>
+
 );
+
 
 export default Verification;

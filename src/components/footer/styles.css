@@ -1,0 +1,19 @@
+.Footer{
+  margin-top: 10px;
+  width: 100%;
+  background-image: url(./assets/backgroundFooter.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+}
+
+footer .footerImg{
+  max-width: 90px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+footer .footerImg img{
+  width: 100%;
+}

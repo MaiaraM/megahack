@@ -1,18 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 .loginContainer{
   display: flex;
   margin: 0 auto;
+  max-width: 75em;
+  box-sizing: border-box;
   /* verificar */
-  margin-top: 6%;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
   color: #2C1244;
 }
+
+.loginFormDados{
+  padding: 1.25em;
+  height: 90%;
+  margin: 0.625em;
+}
+
+/*Logo Empresa*/
+.logoEmpresa{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.logoImg{
+  max-width: 30px;
+}
+
+.logoImg img{
+  width: 100%;
+}
+
 
 /*Style login*/
 .loginContainer .loginFormDados h1{
   color: #2C1244;
-  font-family: 'Montserrat', sans-serif;
   font-size:2.18em ;
 }
 
@@ -20,19 +41,19 @@
 .loginContainer .loginRedeSociais{
   display: flex;
   flex-wrap: wrap;
-  max-width: 9.375em;
+  max-width: 10em;
+  margin-bottom: 30px;
 }
 .loginContainer .loginRedeSociais div{
-  max-width: 1.875em;
+  max-width: 3em;
   padding:0.625em;
+}
+.formLogin{
+  padding: 10px;
+  width: 100%;
 }
 
 /*Style p*/
-.loginContainer .loginFormDados p{
-    font-size: 0.75em;
-    font-weight: 100;
-}
-
 .loginContainer .loginRedeSociais img{
   max-width: 100%;
 }
@@ -65,9 +86,12 @@
   background: none;
   padding: 0.675em;
   margin-left: 0.675em;
+  margin-bottom: 0.93em;
+  width: 100%;
 }
 
 .loginContainer .loginFormDados{
+  max-width: 400px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -78,23 +102,22 @@
 .loginContainer .loginCheckbox{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  padding: 0.35em;
+  font-size: 15px;
+  width: 100%;
 }
 
 .loginContainer .check{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginContainer .check p{
   margin-left: 0.35em;
 }
-.o{
-  background-color: #2C1244;
-}
-.loginContainer .formLogin input[type=checkbox]{
-  background: salmon;
-}
+
 /*Button login*/
 
 .loginContainer .formLogin input[type=submit]{
@@ -113,7 +136,8 @@
 }
 
 .loginContainer .loginImg{
-  max-width: 18.75em;
+  max-width: 25em;
+  padding: 0.31px;
 }
 
 
@@ -127,7 +151,7 @@
   .loginContainer{
     align-self: center;
     align-items: center;
-    margin-top: 50%;
+    margin-top: 10%;
   }
 
 }

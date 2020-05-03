@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import loginImage from './assets/ImagemLogin.png';
-import logoEmpresa  from './assets/logoEmpresa.png';
+import logoEmpresa  from './assets/logo.svg';
 import loginFacebook from './assets/loginFacebook.svg';
 import loginGoolge from  './assets/loginGoogle.svg';
 import loginEmail from './assets/iconEmail.svg';
@@ -13,6 +13,11 @@ const Login = () => (
   <div className="loginContainer">
     <div className="loginForm">
       <div className="loginFormDados">
+        <div className="logoEmpresa">
+          <div className="logoImg">
+            <img src={logoEmpresa} alt=""/>
+            </div>
+        </div>
         <h1>
           Login
         </h1>
@@ -21,7 +26,6 @@ const Login = () => (
           <div><img src={loginGoolge} alt="Icone login pelo google"/></div>
         </div>
         <p>Ou entre com a sua conta do e-mail</p>
-
         <form method="post" action="" className="formLogin">
           <div className="loginAuthentication">
             <img src={loginEmail} alt="Icone email"/>
@@ -34,11 +38,11 @@ const Login = () => (
           <div className="loginCheckbox">
               <div className="check">
                 <input type="checkbox" name="rememberPassword" className="o"/>
-                < p>Lembrar de mim</p>
+                <span>Lembrar de mim</span>
               </div>
-              <p>Esqueceu a senha?</p>
+              <span> Esqueceu a senha?</span>
         </div>
-        <Link to="/Verification"><input type="submit" value="Login" placeholder="Acessar"/></Link> 
+        <Link to="/Main/Verification"><input type="submit" value="Login" placeholder="Acessar"/></Link> 
         </form>   
       </div>
       <div className="loginImg"> 

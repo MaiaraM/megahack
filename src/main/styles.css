@@ -1,0 +1,30 @@
+.Body{
+  width: 100%;
+  border: 0;
+  padding: 0;
+}
+
+@media(max-width:600px){
+  .Body{
+    width:100% ;
+  }
+  .Footer{
+    background-image: url(../components/footer/assets/backgroundMobile.png);
+  }
+  .headerUser{
+    display: flex;
+    justify-content: center;
+  } 
+  .headerUser img{
+    margin-right: 50px;
+  }
+  .verificationContainer{
+      margin-top: 40%;
+      margin-bottom: 40%;
+  }
+  .verificationContainer  input[type=submit]{
+  
+    width: 100%;
+    
+  }
+}

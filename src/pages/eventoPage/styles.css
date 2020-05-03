@@ -1,0 +1,128 @@
+.Container{
+  max-width: 75em;
+  margin: 0 auto;
+  color: #252627;
+}
+
+.Container .eventLogo{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.Container .eventLogo img{
+  width: 100%;
+}
+
+.Container .CardEventsProgramming{
+  display: flex;
+  justify-content: center;
+  font-size: 2.187em;
+  margin-bottom: 1.56em;
+}
+
+.Container .CardEventsProgramming p{
+  padding-bottom: 0.625em;
+  color: #2C1244;
+}
+.Container .CardEventsProgramming hr{ 
+  width: 50%;
+  margin: 0 auto;
+  border-top: 2px solid #2C1244;  
+}
+
+.Container .CardEventsDate{
+  display: flex;
+  align-items: center;
+  padding: 0.325em;
+}
+
+.Container .CardEventsDate .CardEventsday{
+  margin-right:6.25em ;
+  font-size: 1em;
+  margin-left: 1.25em;
+}
+
+.Container .button{
+  background: #2C1244;
+  color: #fff;
+  padding: 0.937em;
+  padding-left:3.127em;
+  padding-right: 3.127em;
+  border-radius: 1.25em;
+  font-size: 0.937em;
+  box-shadow: 0 3px 4px rgba(44, 18, 68, 0.25);
+  max-width: 12.5em;
+}
+.Container .CardEvents .button img{
+  margin-left: 1.56em;
+}
+
+/*Cards*/
+.Container .CardEvents{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1.56em;
+  justify-content: center;
+  max-width: 75em;
+  padding: 0.975em;
+  margin-top: 1.25em;
+  margin-bottom: 2em;
+}
+
+.Container .cardLecture{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 21.875em;
+  justify-content: center;  
+  padding: 0.625em;
+  border-radius: 1.06em;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Container .cardImg{
+  max-width: 21.875em;
+}
+.Container .cardImg img{
+  width: 100%;
+}
+.Container .cardLecture h1{
+  font-size:0.95em;
+  margin-bottom: 0.625em;
+}
+
+.Container .cardLecture .cardPresentation{
+  padding-bottom: 0.625em;
+}
+.Container .cardLectureDescription{
+  max-width: 21.875em;
+  font-size: 1em;
+  padding: 0.975em;
+  text-align: justify;
+  padding: 1.25em;
+  margin-top: 1.25em;
+}
+
+.Container .cardTime{
+  margin-top: 1.33em;
+  padding: 0.315;
+}
+
+.Container .cardTime p{
+  font-weight: bolder;
+}
+
+.Container .cardTime .cardTimeInitial{
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+.Container .iconGoogle{  
+    justify-content: left;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.625em;
+} 
+
