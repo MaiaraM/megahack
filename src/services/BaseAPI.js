@@ -32,8 +32,8 @@ class BaseAPI {
 
 //Lista de todos os endpoints.
 export const URLS = {
-    LOGIN:"/login/",
-    CUSTOMER: "/customer",
+    LOGIN:"/login",
+    CUSTOMERS: "/customers",
 }
 
 /**Retorno generico de excessões */
@@ -42,16 +42,17 @@ export const exception = (e, message) => {
     return { error: message }
 }
 
-export const baseURL = () => ("http://megahack-api-tim.herokuapp.com ");
-const api = axios.create({ baseURL: baseURL(), withCredentials: true });
-
+export const baseURL = () => ("https://megahack-api-tim.herokuapp.com");
+const api = axios.create({ baseURL: baseURL() });
 
 //Cria uma instancia de api
 api.interceptors.request.use(config => {
    config.headers = { 'Content-Type': 'application/json; charset=utf-8' };
-    const token = StorageUtil.getItem(KEYS.AUTH_TOKEN);
-    config.headers['Authorization'] = `Bearer ${token}`;
-         
+    const token = StorageUtil.getItem(KEYS.TOKEN_KEY);
+
+    if(token){
+        config.headers['Authorization'] = `Bearer ${token}`;
+    }
     return config; },
     error => Promise.reject(error)
 );

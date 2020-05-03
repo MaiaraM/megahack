@@ -27,9 +27,11 @@ class StorageUtil {
 
 //Declaração das chaves
 export const KEYS = {
-    TOKEN_KEY: 'dash-token!',
-    USER_KEY: 'dash-username!',
-    REMEMBER: 'dash-remember-me!',
+    TOKEN_KEY: 'api-token!',
+    USER_KEY: 'api-username!',
+    REMEMBER: 'api-remember-me!',
+    AUTH_KEY: 'authority',
+    EVENT_KEY: 'event-key!',
 }
 
 export default StorageUtil;

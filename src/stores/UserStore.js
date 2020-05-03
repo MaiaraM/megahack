@@ -36,6 +36,7 @@ class UserStore {
         this.toastHelper.notify(status, message, 3000);
     }
 
+
     /**Cria um novo usuário */
     async signup(newUserData) {
         this.loading = true;

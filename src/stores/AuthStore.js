@@ -3,7 +3,7 @@ import { extendObservable } from 'mobx';
 import AuthAPI from '../services/AuthAPI';
 
 import ToastHelper, { STATUS_HELPER } from '../utils/ToastHelper';
-import StorageUtil from '../utils/StorageUtil';
+import StorageUtil, { KEYS } from '../utils/StorageUtil';
 
 /**
  * Store que trata toda lógica de autenticação do usuário.
@@ -16,9 +16,12 @@ class AuthStore {
 
     uuidToken = '';
 
-    constructor() {
+    constructor(rootStore) {
+        this.rootStore = rootStore;
         this.toast = new ToastHelper();
         extendObservable(this, {...initValues });
+        const rememberLogin = StorageUtil.getItem(KEYS.REMEMBER);
+        if(rememberLogin === 'true') this.autoLogin();
     }
 
     get isAuthenticated() {
@@ -29,11 +32,24 @@ class AuthStore {
         this._isAuthenticated = value;
     }
 
+    async autoLogin() { 
+        this.loading = true;
+        const savedUser = StorageUtil.getItem(KEYS.USER_KEY);
+        if(savedUser) {
+            const result = await this.rootStore.userStore.getUser(savedUser);
+            console.log(result)
+            this.isAuthenticated = !result.error;
+            if(!this.isAuthenticated) {
+                StorageUtil.cleanAll();
+            }
+        }
+        this.loading = false;
+    }
+
     /** Faz o login */
     async login(username, password) {
         this.loading = true;
         this.isAuthenticated = false;
-        console.log(username)
         const authResponse = await AuthAPI.login(username, password);
         this.isAuthenticated = !authResponse.error
         if(!this.isAuthenticated) StorageUtil.cleanAll();

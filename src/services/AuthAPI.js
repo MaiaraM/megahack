@@ -1,8 +1,6 @@
 import BaseAPI, { URLS } from "./BaseAPI";
 import StorageUtil, { KEYS } from "../utils/StorageUtil";
 import {loginMok} from '../utils/consts/Const'
-import { decodeJWT } from '../utils/Functions';
-
 
 /**AuthRequests é a camada onde incluímos a lógica que conversa direto com o backend e devolve o dado para  store.. */
 class AuthAPI {
@@ -10,14 +8,10 @@ class AuthAPI {
     /**Autentica o usuário e grava o token no localstorage */
     static async login(username, password) {
         try {
-            //const response = await BaseAPI.post(URLS.LOGIN, { username, password:password });
-            const response = loginMok;
+            const response = await BaseAPI.post(URLS.LOGIN, { username, password:password });
+            //const response = loginMok;
             if(response.status === 200){
                 StorageUtil.setItem(KEYS.USER_KEY, username);
-                const currentToken = response.headers.authorization.split(" ")[1];
-                const decode = decodeJWT(currentToken);
-                StorageUtil.setItem(KEYS.AUTH_KEY, decode.Authorities)
-                StorageUtil.setItem(KEYS.TOKEN_KEY, currentToken);
                 return true;
             }
             return { error: 'Não autenticado' }
