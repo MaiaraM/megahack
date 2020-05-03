@@ -6,6 +6,7 @@ const Layout = ({children}) => (
   <div className="Body">
     <Header/>
     {children}
+    <Footer/>
   </div>
 );
 export default Layout;

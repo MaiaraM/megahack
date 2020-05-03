@@ -9,7 +9,8 @@ import LoadingComponent from './components/LoadingComponent/LoadingComponent';
 //Imports apenas importados caso forem requisitados pela aplicação.
 const LoginCenterPage = lazy(() => import('./pages/login'));
 const EventsPage = lazy(() => import('./pages/eventoPage'));
-
+const ConferenciaPage = lazy(() => import('./pages/conferencia'));
+const patrocinadorPage = lazy(() => import('./pages/patrocinador/patrocinadorPage'));
 
 
 
@@ -26,7 +27,7 @@ export default inject(stores => (
                 <Switch>
                     <Route exact path='/login' render={() => <Redirect to={"/"} />} />
                     <Route exact path='/logout' render={() => logout()} />
-                    <PrivateRoute path="/" component={EventsPage} isAuthenticated={props.authStore.isAuthenticated} />
+                    <PrivateRoute path="/" component={patrocinadorPage} isAuthenticated={props.authStore.isAuthenticated} />
                     <Redirect to="/error-page" /> 
                 </Switch>
             </Suspense>
