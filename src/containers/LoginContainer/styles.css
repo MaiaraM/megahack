@@ -53,13 +53,13 @@
   padding: 1.56em;
 }
 
-.loginContainer .formLogin .loginAuthentication {
+.loginAuthentication {
   padding: 0.625em;
   display: flex;
   align-items: center;
 }
 
-.loginContainer .formLogin .loginAuthentication input{
+.loginAuthentication input{
   border: none;
   border-bottom: 1px solid #909090;
   background: none;
