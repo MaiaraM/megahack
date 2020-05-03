@@ -8,6 +8,7 @@ import palestranteImg from "./assets/palestranteImg.svg";
 import iconGoogle from "./assets/iconGoogle.svg";
 import VerificationContainer from '../../containers/VerificationContainer/VerificationContainer';
 import { observer, inject } from 'mobx-react';
+import CarouselImgContainer from '../../containers/CarouselImgContainer';
 
 const EventsPage = (props) => {
 
@@ -16,6 +17,7 @@ const EventsPage = (props) => {
       <>
       {console.log(props)}
         <div className="eventLogo">
+          <CarouselImgContainer />
           <img src={eventLogo} alt="Imagem do Logo de Evento" />
         </div>
         <div className="CardEventsProgramming">
