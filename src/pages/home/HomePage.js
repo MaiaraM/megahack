@@ -8,7 +8,7 @@ import Layout from '../../containers/LayoutContainer/LayoutContainer';
 
 class HomePage extends React.Component {
 
-
+    
     render() {
         return (
             <React.Fragment>

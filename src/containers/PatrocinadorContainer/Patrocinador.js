@@ -2,6 +2,8 @@ import React from 'react';
 import LogoPatrocinador from './assets/LogoPatrocinador.svg';
 import VideoPatrocinador from './assets/Video.svg';
 import PerfilPatrocinador from './assets/PerfilPatrocinador.svg';
+import { withRouter } from 'react-router-dom';
+import Footer from '../../components/footer';
 
 const PatrocinadorContainer = () =>(
   <div className="Container">
@@ -55,7 +57,9 @@ const PatrocinadorContainer = () =>(
         </div>
       </div>
     </div>
+    <Footer />
+
   </div>
 );
 
-export default PatrocinadorContainer;
+export default (withRouter(PatrocinadorContainer));

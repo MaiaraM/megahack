@@ -12,6 +12,7 @@ import VerificationContainer from '../../containers/VerificationContainer/Verifi
 import { observer, inject } from 'mobx-react';
 import { palestras } from '../../utils/consts/Const'
 import { withRouter } from 'react-router-dom';
+import Footer from '../../components/footer';
 
 
 
@@ -96,9 +97,9 @@ const EventsPage = (props) => {
       </div>
     </div>
 
-    <div className="Patrocinadores"><img src={Patrocinadores} alt=""/></div>
+    <div className="Patrocinadores" onClick={() => props.history.push(`/event/2/stand/2`)}><img src={Patrocinadores} alt=""/></div>
   
-
+    <Footer />
   </div>
 };
 
