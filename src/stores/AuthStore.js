@@ -40,6 +40,7 @@ class AuthStore {
             this.isAuthenticated = !result.error;
             if(!this.isAuthenticated) {
                 StorageUtil.cleanAll();
+                this.toast.notify(STATUS_HELPER.ERROR,"Login ou senha errada");
             }
         }
         this.loading = false;
@@ -51,7 +52,10 @@ class AuthStore {
         this.isAuthenticated = false;
         const authResponse = await AuthAPI.login(username, password);
         this.isAuthenticated = !authResponse.error
-        if(!this.isAuthenticated) StorageUtil.cleanAll();
+        if(!this.isAuthenticated) {
+            StorageUtil.cleanAll();
+            this.toast.notify(STATUS_HELPER.ERROR,"Login ou senha errada");
+        }
         this.loading = false;
         return this.isAuthenticated;
     }

@@ -1,6 +1,5 @@
 import BaseAPI, { URLS } from "./BaseAPI";
 import StorageUtil, { KEYS } from "../utils/StorageUtil";
-import {loginMok} from '../utils/consts/Const'
 
 /**AuthRequests é a camada onde incluímos a lógica que conversa direto com o backend e devolve o dado para  store.. */
 class AuthAPI {
