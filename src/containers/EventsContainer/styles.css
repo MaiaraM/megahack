@@ -154,3 +154,22 @@
     padding-right: 0.625em;
 } 
 
+.Container .Carousel{
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+.Container .Carousel img{
+  width: 100%;
+}
+
+.Container .Patrocinadores{
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.Container .Patrocinadores img{
+  width: 100%;
+}
+

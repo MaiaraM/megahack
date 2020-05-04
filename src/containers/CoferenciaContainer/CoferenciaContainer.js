@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
+import Enviar from './assets/Enviar.svg';
 
 import Video from './assets/veidoProject.svg';
 import { Form } from "@unform/web";
 import Input from "../../components/InputComponent/InputComponent";
 import { observer, inject } from 'mobx-react';
+
 
 const ConferenciaContainer = (props) => {
 
@@ -23,19 +28,26 @@ const ConferenciaContainer = (props) => {
       </p>
     </div>
 
+ 
     <div className="Chat">
       <div className='pergunta-container' onScroll>
         {list && list.map(msg => {
           return <>
-              <p>{/* {props.userStore.user.username} - */} {msg}</p>
+              <div className="chatResponse">{/*  {props.userStore.data.name.fistname}} */} {msg}</div>
           </> 
         })}
       </div>
-      <Form onSubmit={data => handleSubmit(data.msg)} className="formConferencia">
-        <div><Input type="text" name='msg' placeholder="Faça sua pergunta" /></div>
-        <div><button type="submit">Enviar </button></div>
-      </Form>
-    </div>
+ 
+
+      <div className="chatQuestion">
+        <Form onSubmit={data => handleSubmit(data.msg)} className="formConferencia">
+          <div className="chatQuestionInput">
+            <div><Input type="text-area" name='msg'  placeholder="Faça sua pergunta" /></div>
+            <div><button type="submit"><img src={Enviar} alt="Enviar Mensagem"/> </button></div>
+          </div>
+        </Form>
+      </div>
+  </div>
   </div>
 };
 

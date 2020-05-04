@@ -5,6 +5,9 @@ import "./styles.css";
 import eventLogo from "./assets/LogoEvento.svg";
 import palestranteImg from "./assets/palestranteImg.svg";
 import iconGoogle from "./assets/iconGoogle.svg";
+import Carousel from './assets/Carousel.svg';
+import Patrocinadores from './assets/Patrocinadores.png';
+
 import VerificationContainer from '../../containers/VerificationContainer/VerificationContainer';
 import { observer, inject } from 'mobx-react';
 import { palestras } from '../../utils/consts/Const'
@@ -84,6 +87,17 @@ const EventsPage = (props) => {
         <hr />
       </div>
     </div>
+  <div className="Carousel"><img src={Carousel} alt=""/></div>
+
+  <div className="CardEventsProgramming">
+      <div className="lineP">
+        <p>Feira Online</p>
+        <hr />
+      </div>
+    </div>
+
+    <div className="Patrocinadores"><img src={Patrocinadores} alt=""/></div>
+  
 
   </div>
 };
