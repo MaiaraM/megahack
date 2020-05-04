@@ -51,6 +51,7 @@ class AuthStore {
         this.loading = true;
         this.isAuthenticated = false;
         const authResponse = await AuthAPI.login(username, password);
+        await this.rootStore.userStore.getUser(username);
         this.isAuthenticated = !authResponse.error
         if(!this.isAuthenticated) {
             StorageUtil.cleanAll();

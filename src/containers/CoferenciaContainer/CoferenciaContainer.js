@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 import Enviar from './assets/Enviar.svg';
 
@@ -31,15 +29,17 @@ const ConferenciaContainer = (props) => {
  
     <div className="Chat">
       <div className='pergunta-container' onScroll>
+        {console.log(props.userStore)}
         {list && list.map(msg => {
           return <>
-              <div className="chatResponse">{/*  {props.userStore.data.name.fistname}} */} {msg}</div>
+              <div className="chatResponse">{props.userStore.user.firstName} {msg}</div>
           </> 
         })}
       </div>
  
 
       <div className="chatQuestion">
+
         <Form onSubmit={data => handleSubmit(data.msg)} className="formConferencia">
           <div className="chatQuestionInput">
             <div><Input type="text-area" name='msg'  placeholder="Faça sua pergunta" /></div>
