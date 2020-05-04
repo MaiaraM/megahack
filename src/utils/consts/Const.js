@@ -4,3 +4,27 @@ export const loginMok = {
     },
     status : 200,
 }
+
+export const palestras = [
+    {
+        'titulo': 'Design thinking + Comunicação Não-Violenta',
+        'palestrante':'João da Silva, UI/UX Designer na Empresa',
+        'texto':'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam',
+        'horario': '09h00',
+        'duração':' 02 horas'
+    },
+    {
+        'titulo': 'Flutter + Mox ',
+        'palestrante':'Julia Oliveira, Mobile Developer Senior',
+        'texto':'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam',
+        'horario': '11h30',
+        'duração':' 01 horas'
+    },
+    {
+        'titulo': 'Flutter + Mox ',
+        'palestrante':'Julia Oliveira, Mobile Developer Senior',
+        'texto':'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam',
+        'horario': '11h30',
+        'duração':' 01 horas'
+    }
+]

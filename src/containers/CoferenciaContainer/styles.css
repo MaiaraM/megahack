@@ -1,11 +1,11 @@
-.Container{
+.ConferenciaContainer{
   max-width: 98%;
   margin-top: 1000px;
   padding-top: 20px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .VideoConferencia{
   max-width: 70%;
@@ -23,9 +23,18 @@
 
 .Chat{
   max-width: 25%;
+  box-shadow: 10px 7px 14px -4px rgba(196,192,196,1);
   padding: 5px;
+  margin: 0 10px;
+  border: 1px solid #dadada;
+  min-width: 400px;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
 }
-.Chat img{
-  width:100%;
+
+.Chat .pergunta-container{
+  min-width: 100%;
+  height: 100%;
 }
 

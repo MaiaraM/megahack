@@ -12,3 +12,5 @@
 @import '../components/header/styles.css';
 @import '../containers/CoferenciaContainer/styles.css';
 @import '../containers/PatrocinadorContainer/styles.css';
+
+@import '../containers/CoferenciaContainer/styles.css';

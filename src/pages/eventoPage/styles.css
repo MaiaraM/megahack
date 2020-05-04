@@ -65,13 +65,15 @@
   background-position-x: 90%;
 }
 
+.container-palestras{
+  display: flex;
+}
 
 /*Cards*/
 .Container .CardEvents{
+  cursor: pointer;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:1.56em;
   justify-content: center;
   max-width: 75em;
   padding: 0.975em;
