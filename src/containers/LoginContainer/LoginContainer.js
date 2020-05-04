@@ -18,7 +18,14 @@ import { observer, inject } from "mobx-react";
 const LoginContainer = (props) => {
   
   async function handleSubmit(data)  {
+    try{
       const isSuccess = await props.authStore.login(data.email, data.password);
+        if(!isSuccess){
+          alert('Usuário ou senha invalido')
+        }
+    }catch(error){
+      alert('Algo deu errado')
+    }
   }
 
   return (
@@ -47,7 +54,7 @@ const LoginContainer = (props) => {
             <div className="formCheck">
               <p>Esqueceu a senha?</p>
             </div>
-              <button type="submit">Sign in</button>
+              <button type="submit">Login</button>
           </Form>
         </div>
         <div className="loginImg">

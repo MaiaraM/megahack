@@ -24,16 +24,16 @@ const ConferenciaContainer = (props) => {
     </div>
 
     <div className="Chat">
-      <div className='pergunta-container'>
+      <div className='pergunta-container' onScroll>
         {list && list.map(msg => {
           return <>
-              <p>{props.userStore.user.firstName} - {msg}</p>
-          </>
-         })}
+              <p>{/* {props.userStore.user.username} - */} {msg}</p>
+          </> 
+        })}
       </div>
       <Form onSubmit={data => handleSubmit(data.msg)} className="formConferencia">
-        <Input type="text" name='msg' placeholder="Digite sua pergunta" />
-        <button type="submit">Entrar no event</button>
+        <div><Input type="text" name='msg' placeholder="Faça sua pergunta" /></div>
+        <div><button type="submit">Enviar </button></div>
       </Form>
     </div>
   </div>

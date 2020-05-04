@@ -1,36 +1,36 @@
-.verificationContainer{
-  display: flex;
-  margin: 0 auto;
-  margin-top: 4%;
-}
-
-
 .verification{
+  max-width: 75em;
+  min-height: 20%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 3.125em;
   align-items: center;
+  margin-top: 5%;
 }
 
-.verificationContainer input{
+form{
+  display: flex;
+  flex-direction: column;
+}
+.verification input{
   padding: 0.625em;
   margin: 0.312em;
   border: 0.3px solid rgba(0, 0, 0, 0.3);
   padding-left: 3.125em;
   padding-right: 3.125em;
 }
-.verificationContainer p{
+.verification p{
   margin: 10px;
   letter-spacing: 1px;
   color: #2C1244;
   font-weight: bold;
 
 }
-.verificationContainer  input[type=submit]{
+.verification  button[type=submit]{
   background:#2C1244;
   border: none;
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 0.8em;
   border-radius: 1.875em;
@@ -38,6 +38,7 @@
   box-shadow: 0 3px 4px rgba(44, 18, 68, 0.25);
   padding: 0.75em;
 }
+
 
 
 

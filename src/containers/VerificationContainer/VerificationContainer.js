@@ -20,7 +20,7 @@ const VerificationContainer = (props) => {
             <p>Digite o código do evento que você deseja participar</p>
             <Form onSubmit={handleSubmit} className="formVerifica">
                 <Input type="text"  name='code' placeholder="Digite seu codigo aqui"  />
-                <button type="submit">Entrar no event</button>
+                <button type="submit">Entrar no evento</button>
             </Form>
         </div>
         <Footer />
