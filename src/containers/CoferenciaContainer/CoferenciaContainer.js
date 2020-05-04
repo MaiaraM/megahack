@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import Video from './assets/veidoProject.svg';
 import { Form } from "@unform/web";
 import Input from "../../components/InputComponent/InputComponent";
+import { observer, inject } from 'mobx-react';
 
-const ConferenciaContainer = () => {
+const ConferenciaContainer = (props) => {
 
   const [list, setList] = useState([])
 
@@ -24,7 +25,11 @@ const ConferenciaContainer = () => {
 
     <div className="Chat">
       <div className='pergunta-container'>
-        {list && list.map(msg => <p>{msg}</p> )}
+        {list && list.map(msg => {
+          return <>
+              <p>{props.userStore.user.firstName} - {msg}</p>
+          </>
+         })}
       </div>
       <Form onSubmit={data => handleSubmit(data.msg)} className="formConferencia">
         <Input type="text" name='msg' placeholder="Digite sua pergunta" />
@@ -34,4 +39,6 @@ const ConferenciaContainer = () => {
   </div>
 };
 
-export default ConferenciaContainer;
+export default inject((stores) => ({
+  userStore: stores.stores.userStore,
+})) (observer(ConferenciaContainer));
