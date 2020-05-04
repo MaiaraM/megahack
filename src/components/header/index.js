@@ -3,12 +3,13 @@ import "./styles.css";
 
 import User from "./assets/User.svg";
 import logo from "./assets/logo.svg";
+import { withRouter } from 'react-router-dom';
 
-const Header =()=> (
+const Header =(props)=> (
   <header id="header">
     <div className="header">
       <div className="headerNav">
-      <img src={logo} alt="Logo plataforma"/>
+      <img src={logo} onClick={() => props.history.push(`/event/2`)} alt="Logo plataforma"/>
         <div className="headerUser">
           <p>
             Olá , Poliana Lima
@@ -28,4 +29,4 @@ const Header =()=> (
   </header>
 );
 
-export default Header;
+export default (withRouter(Header));
