@@ -39,6 +39,20 @@ form{
   padding: 0.75em;
 }
 
+@media(max-width:600px){
+  .verification{
+    margin-top: 40%;
+    margin-bottom: 15%;
+    text-align: center;
+  }
+}
+
+@media(max-width:600px){
+  .verification{
+    text-align: center;
+}
+}
+
 
 
 

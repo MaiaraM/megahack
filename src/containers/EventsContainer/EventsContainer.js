@@ -24,6 +24,7 @@ const EventsPage = (props) => {
 
  
   return <div className="Container">
+  <div className="ContainerPage">
     <div className="eventLogo">
       <img src={eventLogo} alt="Imagem do Logo de Evento" />
     </div>
@@ -98,9 +99,10 @@ const EventsPage = (props) => {
     </div>
 
     <div className="Patrocinadores" onClick={() => props.history.push(`/event/2/stand/2`)}><img src={Patrocinadores} alt=""/></div>
-  
+    </div>
     <Footer />
   </div>
+
 };
 
 

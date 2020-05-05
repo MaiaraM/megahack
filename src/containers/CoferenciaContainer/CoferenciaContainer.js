@@ -32,7 +32,7 @@ const ConferenciaContainer = (props) => {
         {console.log(props.userStore)}
         {list && list.map(msg => {
           return <>
-              <div className="chatResponse">{props.userStore.user.firstName} {msg}</div>
+              <div className="chatResponse">{props.userStore.user.firstName} : {msg}</div>
           </> 
         })}
       </div>

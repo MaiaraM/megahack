@@ -1,7 +1,11 @@
 .Container{
-  max-width: 75em;
+  max-width: 100%;
   margin: 0 auto;
   color: #252627;
+}
+.ContainerPage{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Container .eventLogo{
@@ -75,20 +79,29 @@
 
 .container-palestras{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between; 
+  max-width: 75em;
+  padding: 0.975em;
+  margin-top: 1.25em;
+  margin-bottom: 2em;  
 }
 
 /*Cards*/
-.Container .CardEvents{
-  cursor: pointer;
-  margin: 0 auto;
+/*.Container .CardEvents{
+   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   display: grid;
-  justify-content: center;
+  justify-content: center; 
   max-width: 75em;
   padding: 0.975em;
   margin-top: 1.25em;
   margin-bottom: 2em;
+  background: salmon; 
 
-}
+}*/
 
 .Container .cardLecture{
   display: flex;
@@ -98,6 +111,7 @@
   padding: 0.625em;
   border-radius: 1.06em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
 }
 
 .Container .cardImg{
@@ -107,6 +121,7 @@
   width: 100%;
 }
 .Container .cardLecture h1{
+  cursor: pointer;
   font-size:0.95em;
   margin-bottom: 0.625em;
 }
@@ -170,6 +185,53 @@
 }
 
 .Container .Patrocinadores img{
+  cursor: pointer;
   width: 100%;
 }
 
+
+@media(max-width:600px){
+  .Container{
+    display: 99%;
+  }
+  .Container .CardEventsProgramming{
+    font-size: 1em;
+  }
+  .Container .CardEventsDate{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto ;
+  
+  }
+
+  .Container .CardEventsdateday {
+    padding-left: 70px;
+    text-align: center;
+    width: 100%;
+  }
+  .CardEventsDate .button{
+    width: 100%;
+  }
+
+  .Container .CardEvents{
+    padding-bottom: 35px;
+  }
+}
+
+@media(max-height:360px){
+  .Container .container-palestras{
+    padding: 10px;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .Container .CardEvents{
+    padding-bottom: 35px;
+    margin: 0 auto;
+  }
+
+  .container-palestras .cardLectureDescription, .cardImg , .cardLecture{
+    max-width: 400px;
+    max-width:100%;
+  }
+}

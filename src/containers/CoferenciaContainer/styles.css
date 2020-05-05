@@ -103,10 +103,11 @@
     width: 98%;
     min-height: 300px;
     max-height: 300px;
+    margin-top: 20px;
   }
-  .Chat .pergunta-container{
 
-    min-height: 100%;
+  .Chat .pergunta-container{
+    min-height: 220px;
     max-height: 90%;
   }
 }

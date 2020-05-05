@@ -9,7 +9,9 @@ const Header =(props)=> (
   <header id="header">
     <div className="header">
       <div className="headerNav">
-      <img src={logo} onClick={() => props.history.push(`/event/2`)} alt="Logo plataforma"/>
+        <div className="headerNavImg">
+          <img src={logo} onClick={() => props.history.push(`/event/2`)} alt="Logo plataforma"/>
+        </div>
         <div className="headerUser">
           <p>
             Olá , Poliana Lima
