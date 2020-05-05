@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 import Enviar from './assets/Enviar.svg';
-
-import Video from './assets/veidoProject.svg';
+import ChatUser from './assets/ChatUser.svg';
 import { Form } from "@unform/web";
 import Input from "../../components/InputComponent/InputComponent";
 import { observer, inject } from 'mobx-react';
@@ -18,7 +17,8 @@ const ConferenciaContainer = (props) => {
 
   return <div className="ConferenciaContainer">
     <div className="VideoConferencia">
-      <img src={Video} alt="" />
+    <iframe width="98%" height="500px" src="https://www.youtube.com/embed/iA4a8NPQmJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     {/*  <img src={Video} alt="" /> */}
       <h1>Nome do palestrante</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -32,7 +32,12 @@ const ConferenciaContainer = (props) => {
         {console.log(props.userStore)}
         {list && list.map(msg => {
           return <>
-              <div className="chatResponse">{props.userStore.user.firstName} : {msg}</div>
+              <div className="chatResponse">
+              <div className="UserChat"><img src={ChatUser} alt=""/></div> 
+              <div className="HoraComents"><div className="NomeUser">{props.userStore.user.firstName}</div>
+              <p>Hora: 22:30 </p> 
+              <div className="Mensseger">{msg}</div></div>
+              </div>
           </> 
         })}
       </div>

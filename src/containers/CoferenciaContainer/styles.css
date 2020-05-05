@@ -50,10 +50,33 @@
   font-size: 12px;
 }
 .Chat .chatResponse{
+  display: flex;
+  align-items: center;
   max-width: 100%;
   padding: 10px;
   border-bottom: 1px solid rgba(196, 196, 196, 0.301);
 }
+.Chat .chatResponse .HoraComents{
+  display: flex;
+  flex-direction: column;
+}
+
+.NomeUser{
+  text-decoration-style: solid;
+  color: #2C1244;
+  font-size: 14px;
+}
+
+.HoraComents p{
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.Mensseger{
+  color: #2C1244;
+  font-size: 14px;
+}
+
 
 
 
